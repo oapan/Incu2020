@@ -1,0 +1,71 @@
+# exercise1
+def num_sums(a,b):
+    c=0
+    d=0
+    while a<=4: 
+        c=a+b 
+        d=d+c
+        a=a+1
+        b=b+1
+    return d
+
+print(num_sums(0,1))
+
+#exercise2
+def test_function(a,b):
+    result = a*b
+    return('Result: {0}'.format(result))
+
+result1 = test_function(2,4)
+print(result1)
+
+#######################################
+
+
+def test_function2(a,b):
+    result = a*b
+    return('Result: {0}'.format(result))
+
+result2 = test_function2(3,5)
+print(result2)
+
+# exercise3
+
+class Pizza():
+    def __init__(name,size,ingredient):
+        name.size= size
+        name.ingredient= ingredient
+        
+Quattro_Formaggi = Pizza('30cm','olive oil')
+Prosciutto = Pizza('32cm','garlic sauce')
+Margheritta = Pizza('40cm','tomato sauce')
+
+print(Quattro_Formaggi)
+print(Quattro_Formaggi.size)
+print(Quattro_Formaggi.ingredient)
+
+print(Prosciutto)
+print(Prosciutto.size)
+print(Prosciutto.ingredient)
+
+print(Margheritta)
+print(Margheritta.size)
+print(Margheritta.ingredient)
+
+#exercise4
+import unittest
+
+def covid_19vaccine(y):
+    vaccine= False
+    if y<= 1941:
+        vaccine=True
+    return vaccine
+
+class tests_covid_19vaccine(unittest.TestCase):
+    def test_covid_19vaccine(self):
+        self.assertEqual(covid_19vaccine(1940),True)
+        self.assertEqual(covid_19vaccine(1950),False)
+        self.assertEqual(covid_19vaccine(1922),True)
+
+if __name__ == '__main__':
+    unittest.main(argv=['first-arg-is-ignored'], exit=False)
